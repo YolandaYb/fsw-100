@@ -1,0 +1,127 @@
+
+
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {-webkit-text-size-adjust: none; }
+
+
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+
+@media only screen and (max-width: 600px){
+#content{
+    grid-template-columns: 4;
+    grid-gap: 20px;
+    display:grid;
+    margin:0 auto;
+    color: white;
+}
+div{
+    border-radius: 5px;
+}
+h1, h2{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.header{
+    grid-column: 1/5;
+    background-color: grey;
+}
+.sidebar{
+    grid-column: 1/5;
+     background-color:darkgrey;
+ }
+ .content{
+    grid-column: 1/5;
+    background-color: darkgrey;
+}
+.sidebar2{
+    grid-column: 1/5;
+    background-color:silver;
+    color: grey;
+}
+.footer{
+    grid-column: 1/5;
+    background-color: grey;
+}
+}
+
+
+ /* MEDIA QUERY FOR THE TABLET STYLE SHEET*/
+ @media only screen and (min-width: 601px) and (max-width: 1140px){
+
+ #content{
+    grid-template-columns: 4;
+    grid-gap: 20px;
+    display:grid;
+    margin:0 auto;
+    color: white;
+}
+div{
+    border-radius: 5px;
+}
+h1, h2{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.header{
+    grid-column: 1/5;
+    background-color: grey;
+}
+.sidebar{
+    grid-column: 1/2;
+    background-color:darkgrey;
+}
+.content{
+    grid-column: 2/5;
+    background-color: darkgrey;
+}
+.sidebar2{
+    grid-column: 1/5;
+    background-color:silver;
+    color: grey;
+}
+.footer{
+    grid-column: 1/5;
+    background-color: grey;
+}
+}
+        
+/* MEDIA QUERY FOR THE DESKTOP STYLE SHEET*/
+ @media only screen and (min-width: 1141px) {
+#content{
+    grid-template-columns: 4;
+    grid-gap: 20px;
+    display:grid;
+    margin:0 auto;
+    color: white;
+}
+div{
+    border-radius: 5px;
+}
+h1, h2{
+    padding-left: 10px;
+    padding-right: 5px;
+ }
+.header{
+    grid-column: 1/5;
+    background-color: grey;
+}
+.sidebar{
+    grid-column: 1/2;
+    background-color:darkgrey;
+}
+.content{
+    grid-column: 2/4;
+    background-color: darkgrey;
+}
+.sidebar2{
+    grid-column: 4/5;
+    background-color:silver;
+    color: grey;
+}
+.footer{
+    grid-column: 1/5;
+    background-color: grey;
+}
+}
