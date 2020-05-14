@@ -1,0 +1,95 @@
+.boxWrapper{
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: 50px, auto;
+    display: grid;
+    grid-gap: 15px;
+    position: relative;    
+}
+div{
+    margin:auto;
+}
+#one{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 5px solid silver;
+    transition: background-color 1s linear 1s, width 1s linear, border 1s linear 1s;
+}
+#one:hover {
+    background-color: grey;
+    border: 5px solid black;
+    width: 150px;
+}
+#two{
+    width: 100px;
+    height: 100px;
+    background-color: seagreen;
+    border: 5px solid black;
+    transition: background-color 1s linear 1s, width 1s linear, height 1s linear;
+}
+#two:hover {
+    background-color: lightseagreen;
+    width: 150px;
+    height: 150px;
+}
+#three{
+    width: 100px;
+    height: 100px;
+    background-color:pink;
+    border: 5px solid aqua;
+    transition: background-color 1s linear 1s, border-radius 1s linear 0s, border 1s linear 1s;
+}
+p {
+    display: none;
+    padding-top: 25px;
+  }
+  #three:hover p {
+    display: inline-block;
+  }
+#three:hover{
+    background-color: coral;
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+#four{
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    border: 5px solid green;
+    border-radius: 50%;
+    transition:  1s;
+}
+#four:hover {
+    background-color:green;
+    border: 10px double springgreen;
+    width: 75px;
+    height: 75px;
+}
+#five{
+    width: 100px;
+    height: 100px;
+    background-color: lavender;
+    border: 5px solid purple;
+    border-radius: 25%;
+    transition: background-color 0.5s linear 0.5s, border 0.5s linear 0.5s;
+}
+#five:hover {
+    background-color: papayawhip;
+    border: 5px solid pink;
+}
+#six {
+    background: powderblue;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 3px grey, 0 1px 2px grey;
+    border-radius: 20px ;
+    transition: all 0.3s linear 0.3s;
+  }
+  #six:hover {
+    border-radius: 20px;
+    box-shadow: 0 14px 28px pink, 0 10px 10px darkmagenta;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  
