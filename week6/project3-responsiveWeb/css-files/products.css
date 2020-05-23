@@ -1,0 +1,363 @@
+/*-----Prevents iPhone from resizing in landscape mode -----*/
+html {-webkit-text-size-adjust: none; 
+}
+body{
+    padding-top: 50px;
+}
+/*----------- apply a natural box layout model to all elements --------------*/
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+@media only screen and (max-width: 425px){
+#container{
+    display:grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: auto;
+    grid-gap: 3px;
+    margin:0 auto;
+    color: black;
+}
+.navbar {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 5px;
+    width: 100%;
+    z-index: 10000;
+    overflow: hidden; 
+    box-shadow:  2px 2px 8px grey;  
+}
+.navbar > a {
+    color:black;
+    padding: 1.3em;
+    padding-bottom: .5em;
+    margin-bottom:5px;
+    text-decoration:none;
+    font-size: 17px; 
+    font-style: italic;
+    padding: 14px 16px;
+    text-align:center;
+}
+.header{
+    grid-column: 1/5;
+    grid-row:1/2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:white;
+    background-color: rgba(6, 136, 23, 0.938);
+}
+.header > h1{
+    margin-bottom: 0;
+}
+.header > p{
+    margin-top: 1em;
+}
+.content{
+    grid-column: 1/5;
+    grid-row:2/3;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+.content > h3{
+    text-align:center;
+}
+.tablediv{
+    display: grid;
+    grid-column: 1/5;
+    grid-row:3/4;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+#products{
+    border-collapse: collapse;
+    width: 100%;
+  }
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}  
+#products tr:nth-child(even){background-color: #f2f2f2;}  
+#products tr:hover {background-color: #ddd;} 
+#products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.footer{
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+    width:100%;
+    background-color: rgba(6, 136, 23, 0.938);
+    color:white;
+}
+.hours > h4{
+    margin-bottom:0;
+}
+.hours > p{
+    margin-top: .5em;
+}
+.location > h4{
+    margin-bottom:0;
+}
+.location > p{
+    margin-top:.5em;
+}
+}
+
+html {-webkit-text-size-adjust: none; 
+}
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+ /*MEDIA QUERY FOR THE TABLET STYLE SHEET*/
+@media only screen and (min-width: 426px) and (max-width: 768px){    
+    #container{
+        display:grid;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3px;
+        margin:0 auto;
+        color: black;
+    }
+    .navbar {
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-content: center;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 5px;;
+        width: 100%;
+        z-index: 10000;
+        overflow: hidden; 
+        box-shadow:  2px 2px 8px grey;  
+    }
+    .navbar > a {
+        color:black;
+        padding: 1.3em;
+        padding-bottom: .5em;
+        margin-bottom:5px;
+        text-decoration:none;
+        font-size: 17px; 
+        font-style: italic;
+        padding: 14px 16px;
+        text-align:center;
+        margin-right:10px;
+        border-radius: 50%;
+    }
+    a:hover{
+        box-shadow:  4px 2px 5px rgba(15, 15, 15, 0.493);
+        transition: 0.2s linear 0.1s;
+        background-color: rgba(6, 136, 23, 0.938);
+        border-radius: 50%;
+        color:white;
+    }
+    .header{
+        grid-column: 1/5;
+        grid-row:1/2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        color:white;
+        background-color: rgba(6, 136, 23, 0.938);
+    }
+    .header > h1{
+        margin-bottom: 0;
+    }
+    .header > p{
+        margin-top: 1em;
+    }
+    .content{
+        grid-column: 1/5;
+        grid-row:2/3;
+        margin-top: 9px;
+        margin-bottom: 10px;
+    }
+    .content > h3{
+        text-align:center;
+    }
+    .tablediv{
+        display: grid;
+        grid-column: 1/5;
+        grid-row:3/4;
+        margin-top: 9px;
+        margin-bottom: 10px;
+    }
+    #products{
+        border-collapse: collapse;
+        width: 100%;
+      }
+    #products td, #products th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }  
+    #products tr:nth-child(even){background-color: #f2f2f2;}  
+    #products tr:hover {background-color: #ddd;} 
+    #products th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    .footer{
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        text-align: center;
+        width:100%;
+        background-color: rgba(6, 136, 23, 0.938);
+        color:white;
+    }
+    .hours > h4{
+        margin-bottom:0;
+    }
+    .hours > p{
+        margin-top:.5em;
+    }
+    .location > h4{
+        margin-bottom:0;
+    }
+    .location > p{
+        margin-top:.5em;
+    }
+    }
+
+
+
+html {-webkit-text-size-adjust: none; 
+}
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+/* MEDIA QUERY FOR THE DESKTOP STYLE SHEET*/
+@media only screen and (min-width: 769px){
+    
+    #container{
+        display:grid;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3px;
+        margin:0 auto;
+        color: black;
+    }
+    .navbar {
+        display: flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        align-content: space-evenly;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 5px;;
+        width: 100%;
+        z-index: 10000;
+        overflow: hidden; 
+        box-shadow:  2px 2px 8px grey;  
+    }
+    .navbar > a {
+        color:black;
+        padding: 1.3em;
+        padding-bottom: .5em;
+        margin-bottom:5px;
+        text-decoration:none;
+        font-size: 17px; 
+        font-style: italic;
+        padding: 14px 16px;
+        text-align:center;
+        margin-right:15px;
+        border-radius: 50%;
+    }
+    a:hover{
+        box-shadow:  4px 2px 5px rgba(15, 15, 15, 0.493);
+        transition: 0.2s linear 0.1s;
+        background-color: rgba(6, 136, 23, 0.938);
+        border-radius: 50%;
+        color:white;
+    }
+    .header{
+        grid-column: 1/5;
+        grid-row:1/2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        color:white;
+        background-color: rgba(6, 136, 23, 0.938);
+    }
+    .header > h1{
+        margin-bottom: 0;
+    }
+    .header > p{
+        margin-top: 1em;
+    }
+    .content{
+        grid-column: 1/5;
+        grid-row:2/3;
+        margin-top: 9px;
+        margin-bottom: 10px;
+    }
+    .content > h3{
+        text-align:center;
+    }
+    .tablediv{
+        display: grid;
+        grid-column: 2/4;
+        grid-row:3/4;
+        margin-top: 9px;
+        margin-bottom: 30px;
+    }
+    #products{
+        border-collapse: collapse;
+        width: 100%;
+      }
+    #products td, #products th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }  
+    #products tr:nth-child(even){background-color: #f2f2f2;}  
+    #products tr:hover {background-color: #ddd;} 
+    #products th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    .footer{
+        grid-column: 1/5;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        text-align: center;
+        width:100%;
+        background-color: rgba(6, 136, 23, 0.938);
+        color:white;
+        position: absolute
+        bottom:0;
+    }
+    .hours > h4{
+        margin-bottom:0;
+    }
+    .hours > p{
+        margin-top:.5em;
+    }
+    .location > h4{
+        margin-bottom:0;
+    }
+    .location > p{
+        margin-top:.5em;
+    }
+    }
