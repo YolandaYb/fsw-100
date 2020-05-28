@@ -1,0 +1,377 @@
+
+html {-webkit-text-size-adjust: none; 
+}
+body{
+    margin:0;
+}
+* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;  }
+@media only screen and (max-width: 425px){
+#container{
+    display:grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: auto;
+    color: black;
+    background-color: rgb(248, 246, 246);
+    background-image:radial-gradient(rgb(253, 253, 251),#e7e6e6);
+}
+img{
+    height:auto;
+    width:100%;
+}
+.navbar {
+    grid-column:1/5;
+    grid-row:1/2;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    padding-top: 0px;
+    width: 100%;
+    background-color: #333;
+}
+.navbar a{
+    grid-column:1/5;
+    color: #f2f2f2;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    text-decoration:none;
+    font-size: 17px; 
+    font-style: italic;
+    padding: 14px 16px;
+    text-align:center;
+    width:100%;
+}
+#header{
+    grid-column: 1/5;
+    grid-row:2/3;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    height:150px;
+    text-align: center;
+}
+div #header > h1{
+    margin-bottom: 10px;
+    margin-top:25px;
+    font-size:50px;
+}
+div #header > p{
+    margin-top:7px;
+    font-style: italic;
+    font-size: 20px;
+}
+.content{
+    grid-column: 1/5;
+    grid-row:3/4;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    font-size:24px;
+    color:lightcoral ;
+    text-align: center;
+    padding-left:1.5em;
+    padding-right: 1.5em;
+}
+.tablediv{
+    display: grid;
+    grid-column: 1/5;
+    grid-row:4/5;
+    margin-bottom:40px;
+    margin-left:5px;
+    margin-right:5px;
+}
+#products{
+    border-collapse: collapse;
+    width: 100%;
+  }
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}  
+#products tr:nth-child(even){background-color: #f2f2f2;}  
+#products tr:hover {background-color: #ddd;} 
+#products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    color: white;
+}
+.footer{
+    grid-column: 1/5;
+    grid-row:5/6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width:100%;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    color:white;
+    margin-top:0;
+}
+.hours > h4{
+    margin-bottom:0;
+}
+.hours > p{
+    margin-top: .5em;
+}
+.location > h4{
+    margin-bottom:0;
+}
+.location > p{
+    margin-top:.5em;
+}
+}
+
+
+/******************** MEDIA QUERY FOR THE TABLET STYLE SHEET**********************************/
+@media only screen and (min-width: 426px) and (max-width: 768px){    
+    #container{
+        display:grid;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3px;
+        color: black;
+        background-color: rgb(248, 246, 246);
+        background-image:radial-gradient(rgb(253, 253, 251),#e7e6e6);
+    }
+    
+    .navbar {
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+        background-color: #333;
+        z-index: 10000;
+    }
+    .navbar  a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 18px 20px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    a:hover{
+        background-color: rgb(119, 119, 119);
+    }
+    .navbar a.active {
+        background-color: white;
+        color:lightcoral;
+    }
+    #header{
+        color:white;
+        width:100%;
+        margin-top:50px; 
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        height:auto;   
+        position:fixed;
+        z-index: 10000;
+        overflow: hidden;
+    }
+    div #header > h1 {
+        margin-top:10px;
+        margin-bottom:0;
+        padding-bottom:0px;
+        font-size: 56px;
+        text-align:center;
+    }
+    div #header > p{
+        font-style: italic;
+        margin-top:0px;
+        margin-bottom:20px;
+        font-size: 26px;
+        text-align:center;
+    }
+    .content{
+        grid-column: 1/5;
+        grid-row:1/2;
+        margin-top: 200px;
+        margin-bottom: 0px;
+        font-size:24px;
+        color:lightcoral ;
+        text-align: center;
+        padding-left:1.5em;
+        padding-right: 1.5em;
+    }
+    .tablediv{
+        display: grid;
+        grid-column: 1/5;
+        grid-row:2/3;
+        height: auto;
+        width: 100%;
+        margin-bottom:40px;
+    }
+    #products{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    #products td, #products th {
+        border: 1px solid #ddd;
+        padding: 20px;
+    }  
+    #products tr:nth-child(even){background-color: #f2f2f2;}  
+    #products tr:hover {background-color: #ddd;} 
+    #products th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        color: white;
+    }
+    .footer{
+        grid-column:1/5;
+        grid-row:3/4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        text-align: center;
+        width:100%;
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        color:white;
+    }
+    .hours > h4{
+        margin-bottom:0;
+        margin-top:10px;
+        font-size:34px;
+    }
+    .hours > p{
+        margin-top:.3em;
+        font-size:24px;
+    }
+    .location > h4{
+    margin-bottom:0;
+    margin-top:10px;
+    font-size:34px;
+    }
+    .location > p{
+        margin-top:.3em;
+        font-size:24px;
+    }
+    }
+
+/******************** MEDIA QUERY FOR DESKTOP STYLE SHEET**********************************/
+@media only screen and (min-width: 769px){
+    #container{
+        display:grid;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+        grid-template-rows: auto;
+        grid-gap: 3px;
+        color: black;
+    }
+   
+    .navbar {
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+        z-index: 10000;
+        background-color: #333;
+    }
+    .navbar > a {
+        float: right;
+        color: white;
+        text-align: center;
+        padding: 18px 20px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    a:hover{
+        background-color: rgb(119, 119, 119);
+    }
+    .navbar a.active {
+        background-color: white;
+        color:lightcoral;
+    }
+    #header{
+        color:white;
+        width:100%;
+        margin-top:50px; 
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        height:auto;   
+        position:fixed;
+        z-index: 10000;
+        overflow: hidden;
+        text-align: center;
+    }
+    div #header > h1{
+        margin-top: 5px;
+        margin-bottom:0;
+        text-align: center;
+        font-size:50px;
+    }
+    div #header > p{
+        font-style: italic;
+        margin-top:4px;
+        text-align: center;
+        margin-bottom:2px;
+    }
+    .content{
+        grid-column: 1/5;
+        grid-row:1/2;
+        margin-top: 170px;
+        margin-bottom: 0px;
+        font-size:24px;
+        color:lightcoral ;
+        text-align: center;
+        padding-left:1.5em;
+        padding-right: 1.5em;
+    }
+    .tablediv{
+        display: grid;
+        grid-column: 1/5;
+        grid-row:2/3;
+        margin-bottom:40px;
+        width:75%;
+        margin:0 auto;
+    }
+    #products{
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    #products td, #products th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }  
+    #products tr:nth-child(even){background-color: #f2f2f2;}  
+    #products tr:hover {background-color: #ddd;} 
+    #products th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        color: white;
+    }
+    .footer{
+        grid-column:1/5;
+        grid-row:6/7;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        text-align: center;
+        width:100%;
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+        color:white;
+    }
+    .hours > h4{
+        margin-bottom:0;
+        margin-top:5px;
+        font-size:40px;
+    }
+    .hours > p{
+        margin-top:.3em;
+        font-size:30px;
+    }
+    .location > h4{
+    margin-bottom:0;
+    margin-top:5px;
+    font-size:40px;
+    }
+    .location > p{
+        margin-top:.3em;
+        font-size:30px;
+    }
+    }
